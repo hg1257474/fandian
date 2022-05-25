@@ -1,33 +1,25 @@
-import { EggApplication } from 'egg';
-import egg from 'egg-mongoose';
-//class TableSchema implements Application,
+/// <reference path="../../node_modules/egg-mongoose/index.d.ts"/>
+import * as All from "egg-mongoose";
 
-interface Oj{
-e
-}
-const Var:Oj;
-export default (app:EggApp) => {
-  const mongoose = app.mongoose;
+import { Mongoose } from "mongoose";
+All.egg.
+export default (app) => {
+  const mongoose: Mongoose = app.mongoose;
   const Schema = mongoose.Schema;
-  EggApplication
-  const Menu={
-    
-  }
+  const Menu = {};
   const TableSchema = new Schema({
-      order:{type:Number},
-      totalCustomer:{type:Number},
-      totalPrice:{type:Number},
-      menu:{type:Var},
-      booker:{type:String},
-      bookTime:{type:Date},
-      deposit:{type:Number},
-      actualPaid:{type:Number},
-      status:{type:Number}
-    }
-
+    order: { type: Number },
+    totalCustomer: { type: Number },
+    totalPrice: { type: Number },
+    menu: { type: Menu },
+    booker: { type: String },
+    bookTime: { type: Date },
+    deposit: { type: Number },
+    actualPaid: { type: Number },
+    status: { type: Number },
   });
 
-  return mongoose.model("User", UserSchema);
+  return mongoose.model("Table", TableSchema);
 };
 
 // {app_root}/app/controller/user.js
