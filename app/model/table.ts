@@ -1,8 +1,4 @@
-/// <reference path="../../node_modules/egg-mongoose/index.d.ts"/>
-import * as All from "egg-mongoose";
-
 import { Mongoose } from "mongoose";
-All.egg.
 export default (app) => {
   const mongoose: Mongoose = app.mongoose;
   const Schema = mongoose.Schema;
